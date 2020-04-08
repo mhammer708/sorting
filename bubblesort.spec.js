@@ -5,7 +5,7 @@ window.swap = function (array) {
     if (a === b) return 0;
     if (a < b) return -1;
   });
-};;
+};
 
 beforeEach(function () {
   spyOn(window, 'swap').and.callThrough();
@@ -27,6 +27,6 @@ describe('Bubble Sort', function () {
     expect(bubbleSort([5, 9, 11, 3])).toEqual([3, 5, 9, 11]);
   });
   it('sorts an array with multiple instances of the same number', function () {
-    expect(bubbleSort([4, 6, 3, 6, 9, 22])).toEqual([3, 4, 6, 6, 9, 22]);
+    expect(bubbleSort([4, 6, 3, 6, 4, 22])).toEqual([3, 4, 6, 6, 9, 22]);
   });
 });
